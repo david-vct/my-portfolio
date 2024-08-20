@@ -14,11 +14,13 @@ const Hero = () => {
 				/>
 			</div>
 			<div className="w-full md:w-1/2">
-				<h3 className="text-xl font-bold">David Vicente</h3>
-				<h1 className="text-7xl font-black pt-4 pb-4 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-					Développeur Web.
-				</h1>
-				<p className="pt-8 text-xl">Création de sites web et applications web addaptés aux besoins des clients.</p>
+				<div className="pb-8 border-b border-neutral">
+					<h1 className="text-7xl font-black pb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+						Développeur Web.
+					</h1>
+					<p className="text-xl font-bold">Ensemble, créons des applications web robustes et performantes.</p>
+				</div>
+				<p className="pt-8 text-xl">Actuellement disponible pour le prochain projet.</p>
 			</div>
 		</section>
 	)

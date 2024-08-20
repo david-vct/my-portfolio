@@ -2,7 +2,7 @@ import React from "react"
 
 const PresentationSection = () => {
 	return (
-		<section className="w-full md:w-2/3 p-16 bg-secondary">
+		<section className="w-full md:w-2/3 p-16">
 			<div className="grid grid-cols-2 gap-16 items-center">
 				<div>
 					<h1 className="text-4xl font-bold pb-4">Je me presente...</h1>
@@ -17,9 +17,8 @@ const PresentationSection = () => {
 					<h2 className="text-4xl font-bold pb-4">Mes valeurs et méthodologies</h2>
 					<p className="text-lg">
 						Mon approche repose sur une écoute attentive de vos besoins, une collaboration étroite tout au long du
-						projet, et un engagement à fournir des solutions robustes, évolutives et optimisées pour les performances.
-						Mon objectif est de garantir la satisfaction du client en respectant les délais et en offrant un suivi
-						personnalisé.
+						projet, et un engagement à fournir des solutions robustes, évolutives et optimisées. Mon objectif est de
+						garantir la satisfaction du client en respectant les délais et en offrant un suivi personnalisé.
 					</p>
 				</div>
 			</div>
