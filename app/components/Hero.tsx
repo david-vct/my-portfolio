@@ -1,3 +1,7 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
+import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import React from "react"
 
@@ -21,6 +25,17 @@ const Hero = () => {
 					<p className="text-xl font-bold">Ensemble, créons des applications web robustes et performantes.</p>
 				</div>
 				<p className="pt-8 text-xl">Actuellement disponible pour le prochain projet.</p>
+				<div className="flex row gap-8 pt-8">
+					<a href="https://www.linkedin.com/in/david-vct/" target="_blank">
+						<FontAwesomeIcon className="h-8" icon={faLinkedin} />
+					</a>
+					<a href="https://github.com/david-vct" target="_blank">
+						<FontAwesomeIcon className="h-8" icon={faGithub} />
+					</a>
+					<a href="mailto:david.vct@proton.me" target="_blank">
+						<FontAwesomeIcon className="h-8" icon={faEnvelopesBulk} />
+					</a>
+				</div>
 			</div>
 		</section>
 	)
