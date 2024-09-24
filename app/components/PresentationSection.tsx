@@ -2,8 +2,8 @@ import React from "react"
 
 const PresentationSection = () => {
 	return (
-		<section className="w-full md:w-2/3 p-16">
-			<div className="grid grid-cols-2 gap-16 items-center">
+		<section className="flex flex-col place-content-center w-full min-h-[50svh] md:w-2/3 p-16">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
 				<div>
 					<h1 className="text-4xl font-bold pb-4">Je me presente...</h1>
 					<p className="text-lg">

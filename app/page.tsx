@@ -10,9 +10,9 @@ export default function Home() {
 		<>
 			<main className="flex flex-col items-center justify-between">
 				<Hero />
+				<TechnoSection />
 				<PresentationSection />
 				<ServicesSection />
-				<TechnoSection />
 				<ProjectSection />
 			</main>
 			<Footer />
