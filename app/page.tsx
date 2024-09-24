@@ -1,17 +1,17 @@
-import Footer from "./components/Footer"
-import Hero from "./components/Hero"
-import PresentationSection from "./components/PresentationSection"
-import ProjectSection from "./components/ProjectSection"
-import ServicesSection from "./components/ServicesSection"
-import TechnoSection from "./components/TechnoSection"
+import Footer from "./components/layout/Footer"
+import Hero from "./components/layout/Hero"
+import PresentationSection from "./components/layout/PresentationSection"
+import ProjectSection from "./components/layout/ProjectSection"
+import ServicesSection from "./components/layout/ServicesSection"
+import TechnoSection from "./components/layout/TechnoSection"
 
 export default function Home() {
 	return (
 		<>
 			<main className="flex flex-col items-center justify-between">
 				<Hero />
-				<TechnoSection />
 				<PresentationSection />
+				<TechnoSection />
 				<ServicesSection />
 				<ProjectSection />
 			</main>

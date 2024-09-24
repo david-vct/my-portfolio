@@ -4,7 +4,7 @@ import React from "react"
 
 const TechnoSection = () => {
 	return (
-		<section className="w-full md:w-2/3 p-16">
+		<section className="w-full md:w-2/3 min-h-[40svh] p-16">
 			<div className="flex flex-row justify-around pb-8 pt-8 border-b border-t border-neutral">
 				<div className="flex flex-row items-center gap-4 text-xl">
 					<FontAwesomeIcon className="h-8" icon={faReact} />
