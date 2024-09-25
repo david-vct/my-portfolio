@@ -2,8 +2,8 @@ import React from "react"
 
 const ServicesSection = () => {
 	return (
-		<section className="relative flex place-content-center w-full md:w-2/3 min-h-[80svh]">
-			<div className="absolute z-[-1] w-full h-full p-inherit bg-[url('/grid-orange.svg')] [mask-image:radial-gradient(circle,transparent_0%,#000_30%,transparent_70%)]"></div>
+		<section className="relative flex place-content-center w-full md:w-2/3 min-h-[80svh] overflow-hidden">
+			<div className="absolute z-[-1] -top-1 skew-x-12 w-full h-full p-inherit bg-[url('/grid-orange.svg')] [mask-image:radial-gradient(circle,transparent_0%,#000_40%,transparent_60%)]"></div>
 			<div className="grid lg:grid-cols-2 gap-16 place-content-center p-16">
 				<div className="p-8 bg-base drop-shadow-ml rounded-md border border-neutral">
 					<h2 className="text-4xl font-bold">Développement Front-end</h2>

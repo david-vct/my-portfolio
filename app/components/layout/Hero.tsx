@@ -11,7 +11,7 @@ const Hero = () => {
 		<section className="flex flex-col md:flex-row items-center justify-between w-full md:w-2/3 h-svh p-8">
 			<div className="flex flex-col items-center justify-center w-full md:w-1/2">
 				<Image
-					className="shadow-2xl shadow-primary/50 rounded-full"
+					className="shadow-2xl shadow-primary/40 rounded-full"
 					src="/david-profile.webp"
 					alt="David Vicente"
 					width={300}
