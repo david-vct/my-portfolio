@@ -4,6 +4,7 @@ import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import React from "react"
+import ButtonLink from "../common/ButtonLink"
 
 const Hero = () => {
 	return (
@@ -26,14 +27,7 @@ const Hero = () => {
 				</div>
 				<p className="pt-8 text-xl">Actuellement disponible pour le prochain projet.</p>
 				<div className="flex flex-row items-center gap-8 pt-8">
-					<a
-						className="flex flex-row items-center px-4 py-2 bg-neutral rounded bg-white text-base font-bold"
-						href="mailto:david.vct@proton.me"
-						target="_blank"
-					>
-						<FontAwesomeIcon className="h-5" icon={faEnvelopesBulk} />
-						<div className="pl-4 text-xl">Contactez-moi</div>
-					</a>
+					<ButtonLink text="Contactez-moi" link="mailto:david.vct@proton.me" icon={faEnvelopesBulk}></ButtonLink>
 					<a href="https://www.linkedin.com/in/david-vct/" target="_blank">
 						<FontAwesomeIcon className="h-8" icon={faLinkedin} />
 					</a>
