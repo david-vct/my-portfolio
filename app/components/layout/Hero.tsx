@@ -8,8 +8,8 @@ import ButtonLink from "../common/ButtonLink"
 
 const Hero = () => {
 	return (
-		<section className="flex flex-col md:flex-row items-center justify-between w-full md:w-2/3 h-svh p-8">
-			<div className="flex flex-col items-center justify-center w-full md:w-1/2">
+		<section className="grid lg:grid-cols-3 gap-16 w-full max-w-7xl h-svh p-16">
+			<div className="place-self-center">
 				<Image
 					className="shadow-2xl shadow-primary/40 rounded-full"
 					src="/david-profile.webp"
@@ -18,7 +18,7 @@ const Hero = () => {
 					height={300}
 				/>
 			</div>
-			<div className="w-full md:w-1/2">
+			<div className="lg:col-span-2 self-center">
 				<div className="pb-8 border-b border-neutral">
 					<h1 className="text-7xl font-black pb-6 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
 						Développeur Web.

@@ -7,7 +7,7 @@ import ServicesSection from "./components/layout/ServicesSection"
 export default function Home() {
 	return (
 		<>
-			<main className="flex flex-col items-center justify-between">
+			<main className="flex flex-col place-items-center">
 				<Hero />
 				<PresentationSection />
 				<ServicesSection />

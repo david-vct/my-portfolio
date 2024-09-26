@@ -6,7 +6,7 @@ const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
 	title: "David Vicente | Web Developer",
-	description: "Portfolio de David Vicente, développeur web freelance. Je crée tout type de site web performant.",
+	description: "Portfolio de David Vicente, développeur web freelance. Je crée tout type de sites web.",
 }
 
 export default function RootLayout({
@@ -15,7 +15,7 @@ export default function RootLayout({
 	children: React.ReactNode
 }>) {
 	return (
-		<html lang="en">
+		<html lang="fr">
 			<body className={inter.className}>{children}</body>
 		</html>
 	)
