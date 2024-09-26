@@ -3,7 +3,7 @@ import Title from "../common/Title"
 
 const PresentationSection = () => {
 	return (
-		<section className="flex flex-col place-content-center w-full md:w-2/3 min-h-[80svh] p-4 md:p-16">
+		<section className="flex flex-col place-content-center w-full max-w-7xl min-h-[80svh] p-4 md:p-16">
 			<Title title="JE ME PRESENTE..." />
 			<div className="grid grid-cols-1 xl:grid-cols-3 gap-16 items-center">
 				<div className="md:col-span-2">
