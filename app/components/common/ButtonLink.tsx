@@ -19,7 +19,7 @@ const ButtonLink = ({ text, link, icon, className }: Props) => {
 			target="_blank"
 		>
 			<FontAwesomeIcon className="h-5" icon={icon} />
-			<div className="pl-4 text-xl">{text}</div>
+			<div className="pl-4 text-md md:text-xl">{text}</div>
 		</a>
 	)
 }

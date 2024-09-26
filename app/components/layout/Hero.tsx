@@ -8,7 +8,7 @@ import ButtonLink from "../common/ButtonLink"
 
 const Hero = () => {
 	return (
-		<section className="grid lg:grid-cols-3 gap-16 w-full max-w-7xl h-svh p-16">
+		<section className="grid lg:grid-cols-3 gap-16 w-full max-w-7xl min-h-svh p-4 md:p-16">
 			<div className="place-self-center">
 				<Image
 					className="shadow-2xl shadow-primary/40 rounded-full"
@@ -20,12 +20,14 @@ const Hero = () => {
 			</div>
 			<div className="lg:col-span-2 self-center">
 				<div className="pb-8 border-b border-neutral">
-					<h1 className="text-7xl font-black pb-6 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+					<h1 className="text-4xl md:text-7xl font-black pb-6 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
 						Développeur Web.
 					</h1>
-					<p className="text-xl font-bold">Ensemble, créons des applications web robustes et performantes.</p>
+					<p className="text-md md:text-xl font-bold">
+						Ensemble, créons des applications web robustes et performantes.
+					</p>
 				</div>
-				<p className="pt-8 text-xl">Actuellement disponible pour le prochain projet.</p>
+				<p className="pt-8 text-md md:text-xl">Actuellement disponible pour le prochain projet.</p>
 				<div className="flex flex-row items-center gap-8 pt-8">
 					<ButtonLink text="Contactez-moi" link="mailto:david.vct@proton.me" icon={faEnvelopesBulk}></ButtonLink>
 					<a href="https://www.linkedin.com/in/david-vct/" target="_blank">
