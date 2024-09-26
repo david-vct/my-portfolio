@@ -6,8 +6,8 @@ import TechnoSection from "./TechnoSection"
 
 const ServicesSection = () => {
 	return (
-		<section className="relative flex flex-col place-content-center w-full max-w-7xl  min-h-[80svh] p-4 md:p-16 overflow-hidden">
-			<div className="absolute z-[-1] -top-1 skew-x-12 w-full h-full p-inherit bg-[url('/grid-orange.svg')] [mask-image:radial-gradient(circle,transparent_0%,#000_40%,transparent_60%)]"></div>
+		<section className="relative flex flex-col place-content-center w-full max-w-7xl min-h-[80svh] p-4 md:p-16 mt-16 overflow-hidden">
+			<div className="absolute z-[-1] -top-1 skew-x-12 w-full h-full bg-origin-padding bg-[url('/grid-orange.svg')] [mask-image:radial-gradient(circle,transparent_0%,#000_40%,transparent_60%)]"></div>
 			<Title title="MES SERVICES" />
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 place-content-center">
 				<div className="p-8 bg-base drop-shadow-ml rounded-md border border-neutral">

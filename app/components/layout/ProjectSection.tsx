@@ -4,7 +4,7 @@ import Title from "../common/Title"
 
 const ProjectSection = () => {
 	return (
-		<section className="w-full md:w-2/3 p-16">
+		<section className="w-full max-w-7xl p-4 md:p-16 mt-16">
 			<Title title="MA SELECTION DE PROJETS"></Title>
 			<div className="flex flex-col gap-16">
 				<Project

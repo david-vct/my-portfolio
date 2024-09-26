@@ -15,7 +15,7 @@ type Props = {
 
 const Project = ({ title, description, images, site, github }: Props) => {
 	return (
-		<div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-8 p-8 rounded-md bg-base border border-neutral">
+		<div className="grid grid-cols-1 lg:grid-cols-2 place-items-center gap-4 md:gap-8 p-8 rounded-md bg-base border border-neutral">
 			<div className="flex flex-row flex-nowrap w-full h-full overflow-x-auto">
 				{images.map((image, index) => (
 					<div className="relative flex-none w-full min-h-80" key={index}>
@@ -24,8 +24,8 @@ const Project = ({ title, description, images, site, github }: Props) => {
 				))}
 			</div>
 			<div>
-				<h2 className="pb-8 text-4xl font-bold">{title}</h2>
-				<p className="pb-8 text-xl">{description}</p>
+				<h2 className="pb-4 md:pb-8 text-2xl md:text-4xl font-bold">{title}</h2>
+				<p className="pb-4 md:pb-8 text-md md:text-xl">{description}</p>
 				<div className="flex flex-row items-center gap-8">
 					{site && <ButtonLink text="Site" link={site} icon={faSquareArrowUpRight}></ButtonLink>}
 					{github && (
