@@ -1,10 +1,15 @@
+import { faStarOfLife } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import React from "react"
+import Title from "../common/Title"
+import TechnoSection from "./TechnoSection"
 
 const ServicesSection = () => {
 	return (
-		<section className="relative flex place-content-center w-full md:w-2/3 min-h-[80svh] overflow-hidden">
+		<section className="relative flex flex-col place-content-center w-full md:w-2/3 min-h-[80svh] p-16 overflow-hidden">
 			<div className="absolute z-[-1] -top-1 skew-x-12 w-full h-full p-inherit bg-[url('/grid-orange.svg')] [mask-image:radial-gradient(circle,transparent_0%,#000_40%,transparent_60%)]"></div>
-			<div className="grid lg:grid-cols-2 gap-16 place-content-center p-16">
+			<Title title="MES SERVICES" />
+			<div className="grid lg:grid-cols-2 gap-16 place-content-center">
 				<div className="p-8 bg-base drop-shadow-ml rounded-md border border-neutral">
 					<h2 className="text-4xl font-bold">Développement Front-end</h2>
 					<ul className="flex flex-col gap-2 text-lg pt-4 list-disc">
@@ -29,6 +34,7 @@ const ServicesSection = () => {
 						</li>
 					</ul>
 				</div>
+				<TechnoSection className="col-span-2" />
 			</div>
 		</section>
 	)

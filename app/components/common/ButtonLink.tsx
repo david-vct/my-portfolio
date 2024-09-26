@@ -13,7 +13,7 @@ const ButtonLink = ({ text, link, icon, className }: Props) => {
 	return (
 		<a
 			className={
-				"flex flex-row items-center px-4 py-2 rounded bg-white text-base font-bold " + (className ? className : "")
+				"flex flex-row items-center px-4 py-2 rounded-md bg-light text-base font-bold " + (className ? className : "")
 			}
 			href={link}
 			target="_blank"

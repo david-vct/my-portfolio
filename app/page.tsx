@@ -3,7 +3,6 @@ import Hero from "./components/layout/Hero"
 import PresentationSection from "./components/layout/PresentationSection"
 import ProjectSection from "./components/layout/ProjectSection"
 import ServicesSection from "./components/layout/ServicesSection"
-import TechnoSection from "./components/layout/TechnoSection"
 
 export default function Home() {
 	return (
@@ -11,7 +10,6 @@ export default function Home() {
 			<main className="flex flex-col items-center justify-between">
 				<Hero />
 				<PresentationSection />
-				<TechnoSection />
 				<ServicesSection />
 				<ProjectSection />
 			</main>

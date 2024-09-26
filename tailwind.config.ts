@@ -18,6 +18,7 @@ const config: Config = {
 				accent: "#fd582d",
 				base: "#0d1117",
 				neutral: "#30363d",
+				light: "#d6dbdc",
 			},
 		},
 	},

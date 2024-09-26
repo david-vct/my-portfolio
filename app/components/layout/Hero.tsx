@@ -20,7 +20,7 @@ const Hero = () => {
 			</div>
 			<div className="w-full md:w-1/2">
 				<div className="pb-8 border-b border-neutral">
-					<h1 className="text-7xl font-black pb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+					<h1 className="text-7xl font-black pb-6 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
 						Développeur Web.
 					</h1>
 					<p className="text-xl font-bold">Ensemble, créons des applications web robustes et performantes.</p>

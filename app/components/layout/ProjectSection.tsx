@@ -1,10 +1,12 @@
 import React from "react"
 import Project from "../common/Project"
+import Title from "../common/Title"
 
 const ProjectSection = () => {
 	return (
 		<section className="w-full md:w-2/3 p-16">
-			<div className="flex flex-col">
+			<Title title="MA SELECTION DE PROJETS"></Title>
+			<div className="flex flex-col gap-16">
 				<Project
 					title="Vocabulary Tools pour Google Docs"
 					description="Extension pour Google Docs qui fournit un accès instantané aux synonymes, antonymes et conjugaisons"

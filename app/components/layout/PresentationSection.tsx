@@ -1,24 +1,27 @@
 import React from "react"
+import Title from "../common/Title"
 
 const PresentationSection = () => {
 	return (
-		<section className="flex flex-col place-content-center w-full md:w-2/3 p-16">
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-				<div>
-					<h1 className="text-4xl font-bold pb-4">Je me presente...</h1>
-					<p className="text-lg">
-						Je suis David Vicente, un <strong>ingenieur web freelance</strong> avec plus de trois ans d'exprerience dans
-						la création d'applications web. Je travaille avec des <strong>entrepreneurs</strong>, des{" "}
-						<strong>startups</strong> et des <strong>entreprises</strong> pour transformer leurs idées en produits
-						numériques de qualité.
+		<section className="flex flex-col place-content-center w-full md:w-2/3 min-h-[80svh] p-16">
+			<Title title="JE ME PRESENTE..." />
+			<div className="grid grid-cols-1 xl:grid-cols-3 gap-16 items-center">
+				<div className="col-span-2 ">
+					<p className="text-4xl text-balance font-bold bg-gradient-to-tr from-accent to-secondary bg-clip-text">
+						Je suis <span className="text-transparent">David Vicente</span>, un{" "}
+						<span className="text-transparent">ingénieur logiciel</span> freelance spécialisé dans la création
+						d'applications web avec plus de <span className="text-transparent">trois ans d'experience</span> dans le
+						domaine. Je travaille avec des entrepreneurs et des entreprises pour{" "}
+						<span className="text-transparent">transformer leurs idées</span> en produits numériques de qualité.
 					</p>
 				</div>
-				<div>
+				<div className="border-l border-neutral pl-8">
 					<h2 className="text-4xl font-bold pb-4">Mes valeurs et méthodologies</h2>
 					<p className="text-lg">
-						Mon approche repose sur une écoute attentive de vos besoins, une collaboration étroite tout au long du
-						projet, et un engagement à fournir des solutions robustes, évolutives et optimisées. Mon objectif est de
-						garantir la satisfaction du client en respectant les délais et en offrant un suivi personnalisé.
+						Mon approche repose sur une <strong>écoute attentive</strong> de vos besoins, une{" "}
+						<strong>collaboration étroite</strong> tout au long du projet, et un engagement à fournir des solutions
+						robustes, évolutives et optimisées. Mon objectif est de <strong>garantir la satisfaction du client</strong>{" "}
+						en respectant les délais et en offrant un suivi personnalisé.
 					</p>
 				</div>
 			</div>
