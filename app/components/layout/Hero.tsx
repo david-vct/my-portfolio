@@ -1,6 +1,6 @@
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
-import { faEnvelopesBulk } from "@fortawesome/free-solid-svg-icons"
+import { faEnvelopesBulk, faStarOfLife } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import React from "react"
@@ -21,13 +21,34 @@ const Hero = () => {
 			<div className="lg:col-span-2 self-center">
 				<div className="pb-8 border-b border-neutral">
 					<h1 className="text-4xl md:text-7xl font-black pb-6 bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-						Développeur Web.
+						DEVELOPPEUR WEB.
 					</h1>
 					<p className="text-md md:text-xl font-bold">
 						Ensemble, créons des applications web robustes et performantes.
 					</p>
 				</div>
-				<p className="pt-8 text-md md:text-xl">Actuellement disponible pour le prochain projet.</p>
+				<div>
+					<ul className="pt-8 text-md md:text-xl font-bold bg-gradient-to-tl from-accent to-secondary bg-clip-text">
+						<li className="flex flex-row items-center gap-2">
+							<FontAwesomeIcon className="h-3 text-accent" icon={faStarOfLife} />
+							<p>
+								<span className="text-transparent">Actuellement disponible</span> pour le prochain projet
+							</p>
+						</li>
+						<li className="flex flex-row items-center gap-2">
+							<FontAwesomeIcon className="h-3 text-accent" icon={faStarOfLife} />
+							<p>
+								Création de <span className="text-transparent">sites web personnalisés</span>
+							</p>
+						</li>
+						<li className="flex flex-row items-center gap-2">
+							<FontAwesomeIcon className="h-3 text-accent" icon={faStarOfLife} />
+							<p>
+								Plus de <span className="text-transparent">trois ans d'expérience</span>
+							</p>
+						</li>
+					</ul>
+				</div>
 				<div className="flex flex-row items-center gap-8 pt-8">
 					<ButtonLink text="Contactez-moi" link="mailto:david.vct@proton.me" icon={faEnvelopesBulk}></ButtonLink>
 					<a href="https://www.linkedin.com/in/david-vct/" target="_blank">
