@@ -11,26 +11,25 @@ const ServicesSection = () => {
 			<Title title="MES SERVICES" />
 			<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 place-content-center">
 				<div className="p-8 bg-base drop-shadow-ml rounded-md border border-neutral">
-					<h2 className="text-2xl md:text-4xl font-bold">Développement Front-end</h2>
+					<h2 className="text-2xl md:text-4xl font-bold">Développement Web & Mobile</h2>
 					<ul className="flex flex-col gap-2 text-md md:text-xl pt-4 list-disc">
-						<li>Intégration de maquettes : Conversion de designs créés par des designers en code fonctionnel</li>
-						<li>Responsive Design : Développement de sites web adaptés à tous types d’écrans</li>
-						<li>Optimisation : Amélioration de la vitesse de chargement et de l'interaction utilisateur</li>
+						<li>Applications web sur mesure : Conception et développement de sites et plateformes avec React et Next.js</li>
+						<li>Applications mobiles multiplateformes : Développement avec React Native et Expo pour iOS et Android</li>
+						<li>Optimisation : Amélioration de la performance et de l'expérience utilisateur</li>
 					</ul>
 				</div>
 				<div className="p-8 bg-base drop-shadow-xl rounded-md border border-neutral">
-					<h2 className="text-2xl md:text-4xl font-bold">Développement Back-end</h2>
+					<h2 className="text-2xl md:text-4xl font-bold">Intégration et renfort d'équipe</h2>
 					<ul className="flex flex-col gap-2 text-md md:text-xl pt-4 list-disc">
 						<li>
-							Création d’APIs et des fonctionnalités serveur : Mise en place de l’architecture et de la logique métier
+							Immersion rapide dans vos projets existants pour accélérer vos livraisons et absorber vos pics d'activité
 						</li>
 						<li>
-							Gestion de bases de données : Conception, développement et optimisation de bases de données relationnelles
+							Création d'APIs et de fonctionnalités serveur avec Node.js et NestJS : architecture et logique métier
+						</li>
+						<li>
+							Gestion de bases de données : conception, développement et optimisation de bases de données relationnelles
 							ou non relationnelles
-						</li>
-						<li>
-							Sécurité des applications : Implémentation de mesures de sécurité pour protéger les données et prévenir
-							les attaques
 						</li>
 					</ul>
 				</div>

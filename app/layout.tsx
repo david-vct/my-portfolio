@@ -5,8 +5,9 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-	title: "David Vicente | Web Developer",
-	description: "Portfolio de David Vicente, développeur web freelance. Je crée tout type de sites web.",
+	title: "David Vicente | Développeur Web & Mobile",
+	description:
+		"Portfolio de David Vicente, développeur web et mobile fullstack. J'aide les PME et les startups à concevoir et développer leurs solutions web et mobiles.",
 }
 
 export default function RootLayout({

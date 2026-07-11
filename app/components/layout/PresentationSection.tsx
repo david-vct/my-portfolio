@@ -9,17 +9,17 @@ const PresentationSection = () => {
 				<div className="md:col-span-2">
 					<p className="text-2xl md:text-4xl text-balance font-bold bg-gradient-to-tr from-accent to-secondary bg-clip-text">
 						Je suis <span className="text-transparent">David Vicente</span>, un{" "}
-						<span className="text-transparent">ingénieur logiciel</span> freelance spécialisé dans la création
-						d'applications web avec plus de <span className="text-transparent">trois ans d'experience</span> dans le
-						domaine. Je travaille avec des entrepreneurs et des entreprises pour{" "}
-						<span className="text-transparent">transformer leurs idées</span> en produits numériques de qualité.
+						<span className="text-transparent">ingénieur logiciel fullstack</span> spécialisé dans l'écosystème
+						TypeScript, avec plus de <span className="text-transparent">quatre ans d'expérience</span> dans le
+						développement web et mobile. J'aide les{" "}
+						<span className="text-transparent">PME et les startups</span> à transformer leurs idées en produits numériques de qualité.
 					</p>
 				</div>
 				<div className="border-l border-neutral pl-8">
 					<h2 className="text-2xl md:text-4xl font-bold pb-4">Mes valeurs et méthodologies</h2>
 					<p className="text-md md:text-xl">
 						Mon approche repose sur une <strong>écoute attentive</strong> de vos besoins, une{" "}
-						<strong>collaboration étroite</strong> tout au long du projet, et un engagement à fournir des solutions
+						<strong>collaboration étroite</strong> tout au long du projet, et un engagement à fournir des architectures
 						robustes, évolutives et optimisées. Mon objectif est de <strong>garantir la satisfaction du client</strong>{" "}
 						en respectant les délais et en offrant un suivi personnalisé.
 					</p>
