@@ -7,9 +7,15 @@ type Props = {
   images: string[]
   interval?: number
   className?: string
+  vertical?: boolean
 }
 
-const ImageCarousel = ({ images, interval = 10000, className }: Props) => {
+const ImageCarousel = ({
+  images,
+  interval = 10000,
+  className,
+  vertical = false,
+}: Props) => {
   const [index, setIndex] = useState(0)
 
   useEffect(() => {
@@ -20,15 +26,24 @@ const ImageCarousel = ({ images, interval = 10000, className }: Props) => {
     return () => clearInterval(timer)
   }, [images.length, interval])
 
+  // Portrait (mobile) screenshots need their own aspect ratio and object-fit
+  // so they show fully without being cropped or too small.
+  const frameClass = vertical
+    ? "relative w-full max-w-[280px] mx-auto aspect-[664/1440]"
+    : "relative w-full min-h-80"
+  const slideClass = vertical ? "relative h-full" : "relative min-h-80"
+
   return (
     <div
       className={
-        "relative w-full min-h-80 overflow-hidden rounded-lg shadow-inner shadow-black/20 " +
+        "overflow-hidden rounded-lg shadow-inner shadow-black/20 " +
+        frameClass +
+        " " +
         (className ? className : "")
       }
     >
       <div
-        className="flex h-full min-h-80 transition-transform duration-700 ease-in-out"
+        className="flex h-full transition-transform duration-700 ease-in-out"
         style={{
           width: `${images.length * 100}%`,
           transform: `translateX(-${index * (100 / images.length)}%)`,
@@ -36,12 +51,12 @@ const ImageCarousel = ({ images, interval = 10000, className }: Props) => {
       >
         {images.map((image, i) => (
           <div
-            className="relative min-h-80"
+            className={slideClass}
             style={{ width: `${100 / images.length}%` }}
             key={i}
           >
             <Image
-              className="object-cover"
+              className={vertical ? "object-contain" : "object-cover"}
               alt={image}
               src={image}
               fill={true}
