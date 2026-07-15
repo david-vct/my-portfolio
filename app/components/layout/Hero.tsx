@@ -34,7 +34,7 @@ const Hero = () => {
       <motion.div className="place-self-center" variants={fadeUpAt(0)}>
         <Image
           className="shadow-2xl shadow-primary/40 rounded-full"
-          src="/david-profile.webp"
+          src="/images/david-profile.webp"
           alt="David Vicente"
           width={300}
           height={300}
