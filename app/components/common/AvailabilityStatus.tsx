@@ -1,13 +1,20 @@
+"use client"
+
 import { faStarOfLife } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { motion } from "motion/react"
 import React from "react"
 import { getAvailability } from "../../lib/date"
+import { staggerItem } from "./motion/variants"
 
 const AvailabilityStatus = () => {
   const { isAvailable, daysAgo } = getAvailability()
 
   return (
-    <li className="flex flex-row items-center gap-2 whitespace-nowrap">
+    <motion.li
+      className="flex flex-row items-center gap-2 whitespace-nowrap"
+      variants={staggerItem}
+    >
       <FontAwesomeIcon
         className="h-3 shrink-0 text-accent"
         icon={faStarOfLife}
@@ -27,7 +34,7 @@ const AvailabilityStatus = () => {
         <span className="h-1.5 w-1.5 rounded-full animate-pulse bg-green-400" />
         Mis à jour il y a {daysAgo} j
       </span>
-    </li>
+    </motion.li>
   )
 }
 
