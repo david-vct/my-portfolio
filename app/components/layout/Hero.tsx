@@ -7,9 +7,13 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import React from "react"
+import AvailabilityStatus from "../common/AvailabilityStatus"
 import ButtonLink from "../common/ButtonLink"
+import { getYearsOfExperience } from "../../lib/date"
 
 const Hero = () => {
+  const yearsOfExperience = getYearsOfExperience()
+
   return (
     <section className="grid lg:grid-cols-3 gap-16 w-full max-w-7xl min-h-svh p-4 md:p-16">
       <div className="place-self-center">
@@ -39,18 +43,6 @@ const Hero = () => {
                 icon={faStarOfLife}
               />
               <p>
-                <span className="text-transparent">
-                  Actuellement disponible
-                </span>{" "}
-                pour le prochain projet
-              </p>
-            </li>
-            <li className="flex flex-row items-center gap-2">
-              <FontAwesomeIcon
-                className="h-3 text-accent"
-                icon={faStarOfLife}
-              />
-              <p>
                 Création d'
                 <span className="text-transparent">
                   applications web & mobiles sur mesure
@@ -63,12 +55,25 @@ const Hero = () => {
                 icon={faStarOfLife}
               />
               <p>
-                Plus de{" "}
+                Intégration au sein d'
                 <span className="text-transparent">
-                  quatre ans d'expérience
+                  équipes de développement existantes
                 </span>
               </p>
             </li>
+            <li className="flex flex-row items-center gap-2">
+              <FontAwesomeIcon
+                className="h-3 text-accent"
+                icon={faStarOfLife}
+              />
+              <p>
+                Plus de{" "}
+                <span className="text-transparent">
+                  {yearsOfExperience} ans d'expérience
+                </span>
+              </p>
+            </li>
+            <AvailabilityStatus />
           </ul>
         </div>
         <div className="flex flex-row items-center gap-8 pt-8">
