@@ -1,5 +1,5 @@
 import React from "react"
-import Project from "../common/Project"
+import ProjectCard from "../common/ProjectCard"
 import Title from "../common/Title"
 
 const ProjectSection = () => {
@@ -7,19 +7,19 @@ const ProjectSection = () => {
 		<section className="w-full max-w-7xl p-4 md:p-16 mt-16">
 			<Title title="MA SELECTION DE PROJETS"></Title>
 			<div className="flex flex-col gap-16">
-				<Project
+				<ProjectCard
 					title="Vocabulary Tools pour Google Docs"
 					description="Extension pour Google Docs qui fournit un accès instantané aux synonymes, antonymes et conjugaisons"
 					images={["/project-vocabularytools-1.jpg"]}
 					github={"https://github.com/david-vct/gdocs-vocabulary-tools"}
-				></Project>
-				<Project
+				></ProjectCard>
+				<ProjectCard
 					title="Rculture"
 					description="Jeu multijoueur captivant où les participants répondent à des quiz créés par la communauté. Défie tes amis et découvre de nouvelles questions à chaque partie !"
 					images={["/project-rculture-1.png", "/project-rculture-2.png", "/project-rculture-3.png"]}
 					site={"https://rculture.web.app"}
 					github={"https://github.com/david-vct/rculture"}
-				></Project>
+				></ProjectCard>
 			</div>
 		</section>
 	)
