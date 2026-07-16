@@ -1,8 +1,11 @@
+"use client"
+
 import React from "react"
 import { faGithub } from "@fortawesome/free-brands-svg-icons/faGithub"
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons/faLinkedin"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { sections } from "../../lib/sections"
+import { scrollToSection } from "../../lib/scrollToSection"
 
 const Footer = () => {
   return (
@@ -28,6 +31,7 @@ const Footer = () => {
               <li key={section.id}>
                 <a
                   href={`#${section.id}`}
+                  onClick={(event) => scrollToSection(event, section.id)}
                   className="transition-colors duration-300 hover:text-accent"
                 >
                   {section.label}
@@ -41,14 +45,14 @@ const Footer = () => {
           <a
             href="https://www.linkedin.com/in/david-vct/"
             target="_blank"
-            className="inline-block rounded text-light/60 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+            className="inline-block -m-3 rounded p-3 text-light/60 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
           >
             <FontAwesomeIcon size="lg" icon={faLinkedin} />
           </a>
           <a
             href="https://github.com/david-vct"
             target="_blank"
-            className="inline-block rounded text-light/60 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+            className="inline-block -m-3 rounded p-3 text-light/60 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
           >
             <FontAwesomeIcon size="lg" icon={faGithub} />
           </a>

@@ -35,7 +35,7 @@ const ServicesSection = () => {
     >
       <div className="absolute z-[-1] -top-1 skew-x-12 w-full h-full bg-origin-padding bg-[url('/images/grid-orange.svg')] [mask-image:radial-gradient(circle,transparent_0%,#000_40%,transparent_60%)]"></div>
       <Reveal>
-        <Title title="MES SERVICES" />
+        <Title title="Mes services" />
       </Reveal>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 place-content-center">
         {services.map((service, index) => (

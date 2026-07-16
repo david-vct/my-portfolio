@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { sections } from "../../lib/sections"
+import { scrollToSection } from "../../lib/scrollToSection"
 
 // Sober lateral index: a thin line + label per section. The section currently
 // on screen is highlighted in accent color with a slightly longer line.
@@ -46,6 +47,7 @@ const SideIndex = () => {
 					<a
 						key={section.id}
 						href={`#${section.id}`}
+						onClick={(event) => scrollToSection(event, section.id)}
 						aria-current={isActive ? "true" : undefined}
 						className="group flex items-center justify-end gap-3 py-2.5 pl-12"
 					>

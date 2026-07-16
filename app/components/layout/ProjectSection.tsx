@@ -7,7 +7,7 @@ const ProjectSection = () => {
   return (
     <section id="projets" className="w-full max-w-7xl p-4 md:p-16 mt-16">
       <Reveal>
-        <Title title="MA SELECTION DE PROJETS"></Title>
+        <Title title="Ma sélection de projets"></Title>
       </Reveal>
       <div className="flex flex-col gap-16">
         <Reveal fade={false}>

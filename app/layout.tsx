@@ -1,8 +1,16 @@
+import { config } from "@fortawesome/fontawesome-svg-core"
+import "@fortawesome/fontawesome-svg-core/styles.css"
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 import MotionProvider from "./components/common/motion/MotionProvider"
 import SideIndex from "./components/layout/SideIndex"
 import "./globals.css"
+
+// FontAwesome injects its CSS at runtime by default, which causes a flash of
+// giant unstyled icons on first paint (SSR/hydration). Importing the
+// stylesheet ourselves and disabling autoAddCss makes icons correctly sized
+// from the very first render.
+config.autoAddCss = false
 
 const inter = Inter({ subsets: ["latin"] })
 

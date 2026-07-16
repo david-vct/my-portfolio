@@ -14,6 +14,7 @@ import AvailabilityStatus from "../common/AvailabilityStatus"
 import ButtonLink from "../common/ButtonLink"
 import {
   fadeUpAt,
+  fadeUpList,
   listContainer,
   parent,
   staggerItem,
@@ -77,9 +78,11 @@ const Hero = () => {
   // rather than moving in lockstep with the tilted image.
   const haloX = useMotionValue(0)
   const haloY = useMotionValue(0)
-  const haloSpringConfig = { stiffness: 60, damping: 20, mass: 1 }
+  const haloScale = useMotionValue(1)
+  const haloSpringConfig = { stiffness: 45, damping: 20, mass: 1.2 }
   const springHaloX = useSpring(haloX, haloSpringConfig)
   const springHaloY = useSpring(haloY, haloSpringConfig)
+  const springHaloScale = useSpring(haloScale, haloSpringConfig)
 
   const handlePortraitMouseMove = (event: React.MouseEvent<HTMLDivElement>) => {
     const bounds = event.currentTarget.getBoundingClientRect()
@@ -89,8 +92,9 @@ const Hero = () => {
     rotateY.set(offsetX * 2 * MAX_TILT_DEGREES)
     rotateX.set(offsetY * 2 * -MAX_TILT_DEGREES)
     scale.set(1.03)
-    haloX.set(offsetX * 20)
-    haloY.set(offsetY * 20)
+    haloX.set(offsetX * 12)
+    haloY.set(offsetY * 12)
+    haloScale.set(1.08)
   }
 
   const handlePortraitMouseLeave = () => {
@@ -99,6 +103,7 @@ const Hero = () => {
     scale.set(1)
     haloX.set(0)
     haloY.set(0)
+    haloScale.set(1)
   }
 
   return (
@@ -116,8 +121,8 @@ const Hero = () => {
       >
         <motion.div
           aria-hidden="true"
-          className="absolute -inset-6 rounded-full bg-primary/40 blur-2xl -z-10"
-          style={{ x: springHaloX, y: springHaloY }}
+          className="absolute left-1/2 top-[70%] -z-10 h-28 w-28 -translate-x-1/2 -translate-y-1/2 rounded-full bg-gradient-to-tr from-primary/80 via-accent/70 to-secondary/60 blur-3xl sm:h-36 sm:w-36 lg:h-44 lg:w-44"
+          style={{ x: springHaloX, y: springHaloY, scale: springHaloScale }}
         />
         <motion.div
           onMouseMove={handlePortraitMouseMove}
@@ -142,7 +147,7 @@ const Hero = () => {
       <div className="lg:col-span-2 self-center">
         <motion.div
           className="pb-8 border-b border-neutral"
-          variants={listContainer(0.15)}
+          variants={fadeUpList(0.15)}
         >
           <motion.h1
             className="text-4xl md:text-7xl font-black"
@@ -189,9 +194,9 @@ const Hero = () => {
                 icon={faStarOfLife}
               />
               <p>
-                Création d'
+                Conception et développement de{" "}
                 <span className="text-transparent">
-                  applications web & mobiles sur mesure
+                  solutions web et mobiles
                 </span>
               </p>
             </motion.li>
@@ -205,9 +210,9 @@ const Hero = () => {
                 icon={faStarOfLife}
               />
               <p>
-                Intégration au sein d'
+                Renfort technique au sein de{" "}
                 <span className="text-transparent">
-                  équipes de développement existantes
+                  vos équipes de développement
                 </span>
               </p>
             </motion.li>
@@ -242,14 +247,14 @@ const Hero = () => {
           <a
             href="https://www.linkedin.com/in/david-vct/"
             target="_blank"
-            className="inline-block rounded transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+            className="inline-block -m-3 rounded p-3 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
           >
             <FontAwesomeIcon size="xl" icon={faLinkedin} />
           </a>
           <a
             href="https://github.com/david-vct"
             target="_blank"
-            className="inline-block rounded transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+            className="inline-block -m-3 rounded p-3 transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
           >
             <FontAwesomeIcon size="xl" icon={faGithub} />
           </a>
