@@ -47,7 +47,7 @@ const ProjectCard = ({
           )}
           {github && (
             <a href={github} target="_blank">
-              <FontAwesomeIcon className="h-8" size="xl" icon={faGithub} />
+              <FontAwesomeIcon className="h-9" icon={faGithub} />
             </a>
           )}
         </div>

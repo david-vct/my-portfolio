@@ -38,7 +38,7 @@ const SideIndex = () => {
 	return (
 		<nav
 			aria-label="Navigation des sections"
-			className="fixed right-4 lg:right-8 top-1/2 z-50 hidden -translate-y-1/2 flex-col lg:flex"
+			className="fixed right-8 top-1/2 z-50 hidden -translate-y-1/2 flex-col 2xl:flex"
 		>
 			{sections.map((section) => {
 				const isActive = section.id === activeId

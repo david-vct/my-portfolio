@@ -52,7 +52,7 @@ const ServicesSection = () => {
                     className="flex flex-row items-center gap-3"
                   >
                     <FontAwesomeIcon
-                      className="h-3 shrink-0 text-accent"
+                      className="h-2.5 shrink-0 text-accent"
                       icon={faStarOfLife}
                     />
                     <span>{item}</span>

@@ -33,7 +33,7 @@ const Hero = () => {
     >
       <motion.div className="place-self-center" variants={fadeUpAt(0)}>
         <Image
-          className="shadow-2xl shadow-primary/40 rounded-full"
+          className="h-auto w-48 max-w-full sm:w-64 lg:w-[300px] shadow-2xl shadow-primary/40 rounded-full"
           src="/images/david-profile.webp"
           alt="David Vicente"
           width={300}
@@ -74,7 +74,7 @@ const Hero = () => {
               variants={staggerItem}
             >
               <FontAwesomeIcon
-                className="h-3 text-accent"
+                className="h-2.5 text-accent"
                 icon={faStarOfLife}
               />
               <p>
@@ -89,7 +89,7 @@ const Hero = () => {
               variants={staggerItem}
             >
               <FontAwesomeIcon
-                className="h-3 text-accent"
+                className="h-2.5 text-accent"
                 icon={faStarOfLife}
               />
               <p>
@@ -104,7 +104,7 @@ const Hero = () => {
               variants={staggerItem}
             >
               <FontAwesomeIcon
-                className="h-3 text-accent"
+                className="h-2.5 text-accent"
                 icon={faStarOfLife}
               />
               <p>
@@ -118,7 +118,7 @@ const Hero = () => {
           </motion.ul>
         </div>
         <motion.div
-          className="flex flex-row items-center gap-8 pt-8"
+          className="flex flex-row flex-wrap items-center gap-4 sm:gap-8 pt-8"
           variants={fadeUpAt(1.3)}
         >
           <ButtonLink
@@ -127,10 +127,10 @@ const Hero = () => {
             icon={faEnvelopesBulk}
           ></ButtonLink>
           <a href="https://www.linkedin.com/in/david-vct/" target="_blank">
-            <FontAwesomeIcon className="h-8" icon={faLinkedin} />
+            <FontAwesomeIcon className="h-9" icon={faLinkedin} />
           </a>
           <a href="https://github.com/david-vct" target="_blank">
-            <FontAwesomeIcon className="h-8" icon={faGithub} />
+            <FontAwesomeIcon className="h-9" icon={faGithub} />
           </a>
         </motion.div>
       </div>
