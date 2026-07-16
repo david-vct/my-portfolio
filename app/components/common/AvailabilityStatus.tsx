@@ -16,7 +16,8 @@ const AvailabilityStatus = () => {
       variants={staggerItem}
     >
       <FontAwesomeIcon
-        className="h-2.5 shrink-0 text-accent"
+        className="shrink-0 text-accent"
+        size="xs"
         icon={faStarOfLife}
       />
       <p className="whitespace-nowrap">

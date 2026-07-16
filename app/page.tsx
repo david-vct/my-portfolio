@@ -1,3 +1,4 @@
+import CtaSection from "./components/layout/CtaSection"
 import Footer from "./components/layout/Footer"
 import Hero from "./components/layout/Hero"
 import PresentationSection from "./components/layout/PresentationSection"
@@ -12,6 +13,7 @@ export default function Home() {
 				<PresentationSection />
 				<ServicesSection />
 				<ProjectSection />
+				<CtaSection />
 			</main>
 			<Footer />
 		</>

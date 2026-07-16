@@ -43,9 +43,13 @@ const TechnoSection = ({ className }: { className?: string }) => {
             {[...technos, ...technos].map((techno, index) => (
               <div
                 key={index}
-                className="flex flex-row items-center gap-3 px-6 text-lg whitespace-nowrap border-r border-white/10 last:border-r-0"
+                className="flex flex-row items-center gap-4 px-6 text-lg whitespace-nowrap border-r border-white/10 last:border-r-0"
               >
-                <FontAwesomeIcon className="h-7 text-accent" icon={techno.icon} />
+                <FontAwesomeIcon
+                  className="text-accent"
+                  size="lg"
+                  icon={techno.icon}
+                />
                 <span className="font-semibold">{techno.name}</span>
               </div>
             ))}

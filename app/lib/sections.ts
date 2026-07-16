@@ -11,4 +11,5 @@ export const sections: Section[] = [
 	{ id: "presentation", label: "Présentation" },
 	{ id: "services", label: "Services" },
 	{ id: "projets", label: "Projets" },
+	{ id: "contact", label: "Contact" },
 ]

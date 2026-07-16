@@ -53,3 +53,23 @@ body {
 		animation: none;
 	}
 }
+
+@keyframes caret-blink {
+	0%,
+	100% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+}
+
+.typewriter-caret {
+	animation: caret-blink 1s step-end infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.typewriter-caret {
+		animation: none;
+	}
+}

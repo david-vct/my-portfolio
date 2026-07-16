@@ -46,8 +46,12 @@ const ProjectCard = ({
             ></ButtonLink>
           )}
           {github && (
-            <a href={github} target="_blank">
-              <FontAwesomeIcon className="h-9" icon={faGithub} />
+            <a
+              href={github}
+              target="_blank"
+              className="inline-block rounded transition-transform duration-300 hover:-translate-y-0.5 hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-base"
+            >
+              <FontAwesomeIcon size="xl" icon={faGithub} />
             </a>
           )}
         </div>
