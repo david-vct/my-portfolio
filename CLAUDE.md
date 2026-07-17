@@ -24,6 +24,7 @@ This is a single static page app — no routing beyond `/`, no API routes, no ba
 - No test suite currently in place
 - ESLint config extends `next/core-web-vitals` ([.eslintrc.json](.eslintrc.json))
 - Path alias `@/*` maps to project root (see [tsconfig.json](tsconfig.json))
+- **Dev server lifecycle**: before starting `npm run dev` to verify a change, check whether one is already running (e.g. `curl -sf http://localhost:3000`). If it's already up, treat it as the user's — use it, and never kill it. Only start your own instance if none is running, and note its exact PID (`$!`) when you launch it. When you're done, kill only that specific PID (never a broad `pkill -f "npm run dev"` / `pkill -f next-server`, which could hit the user's instance too). Never leave an instance you started running unused after your task is done.
 
 ## Scripts
 
