@@ -1,8 +1,16 @@
+import { faAward } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import Image from "next/image"
 import React from "react"
 import Reveal from "../common/motion/Reveal"
 import Title from "../common/Title"
 import { getYearsOfExperience } from "@/app/lib/date"
+
+const AWARD_GRADIENT_ID = "award-gold-gradient"
+const [awardWidth, awardHeight, , , awardPathData] = faAward.icon
+const awardMaskImage = `url("data:image/svg+xml,${encodeURIComponent(
+  `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${awardWidth} ${awardHeight}'><path d='${awardPathData}'/></svg>`,
+)}")`
 
 const clients: {
   name: string
@@ -47,8 +55,8 @@ const PresentationSection = () => {
       <Reveal>
         <Title title="Je me présente..." />
       </Reveal>
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-16 items-center">
-        <Reveal className="md:col-span-2" delay={0.1}>
+      <div className="grid grid-cols-1 xl:grid-cols-5 gap-16 items-center">
+        <Reveal className="xl:col-span-3" delay={0.1}>
           <p className="text-2xl md:text-4xl text-balance font-bold bg-gradient-to-tr from-accent to-secondary bg-clip-text">
             Je suis <span className="text-transparent">David Vicente</span>, un{" "}
             <span className="text-transparent">ingénieur logiciel</span>{" "}
@@ -61,9 +69,53 @@ const PresentationSection = () => {
             transformer leurs idées en produits numériques de qualité.
           </p>
         </Reveal>
-        <Reveal className="border-l border-neutral pl-8" delay={0.2}>
-          <h2 className="text-2xl md:text-4xl font-bold pb-6">
-            Ils m&apos;ont fait confiance
+        <Reveal
+          className="xl:col-span-2 border-l border-neutral pl-8"
+          delay={0.2}
+        >
+          <h2 className="flex items-center gap-3 text-2xl md:text-4xl font-bold pb-6">
+            <span
+              aria-hidden="true"
+              className="relative inline-block h-6 shrink-0 md:h-7"
+              style={{ aspectRatio: `${awardWidth} / ${awardHeight}` }}
+            >
+              <svg width="0" height="0" className="absolute">
+                <defs>
+                  <linearGradient
+                    id={AWARD_GRADIENT_ID}
+                    x1="0%"
+                    y1="0%"
+                    x2="100%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stopColor="#8a6a10" />
+                    <stop offset="30%" stopColor="#f4d675" />
+                    <stop offset="50%" stopColor="#fff6d8" />
+                    <stop offset="70%" stopColor="#e0ac1c" />
+                    <stop offset="100%" stopColor="#8a6a10" />
+                  </linearGradient>
+                </defs>
+              </svg>
+              <FontAwesomeIcon
+                icon={faAward}
+                style={{ width: "100%", height: "100%" }}
+                className="gold-icon absolute inset-0 drop-shadow-[0_0_3px_rgba(244,196,48,0.5)]"
+              />
+              <span
+                className="animate-icon-sheen absolute inset-0 bg-gradient-to-r from-transparent via-white/90 to-transparent bg-[length:220%_100%]"
+                style={{
+                  WebkitMaskImage: awardMaskImage,
+                  maskImage: awardMaskImage,
+                  WebkitMaskRepeat: "no-repeat",
+                  maskRepeat: "no-repeat",
+                  WebkitMaskSize: "contain",
+                  maskSize: "contain",
+                  WebkitMaskPosition: "center",
+                  maskPosition: "center",
+                }}
+              />
+            </span>
+            <span>Ils m&apos;ont fait confiance</span>
           </h2>
           <div className="flex flex-row flex-wrap items-center gap-x-8 gap-y-6">
             {clients.map((client) => (

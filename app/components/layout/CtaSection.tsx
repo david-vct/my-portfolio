@@ -17,8 +17,11 @@ const CtaSection = () => {
       </Reveal>
       <div className="flex flex-col items-center gap-6 rounded-md border border-white/10 bg-base/40 px-6 py-10 backdrop-blur-sm md:px-16 md:py-14">
         <Reveal delay={0.1} className="flex flex-col items-center gap-6">
-          <p className="max-w-3xl text-balance text-3xl md:text-6xl font-black leading-tight bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
-            Un projet en tête&nbsp;? Discutons-en.
+          <p className="max-w-3xl text-balance text-3xl md:text-6xl font-black leading-tight">
+            <span className="text-white">Un projet en tête&nbsp;?</span>{" "}
+            <span className="bg-gradient-to-r from-accent to-secondary bg-clip-text text-transparent">
+              Discutons-en.
+            </span>
           </p>
           <p className="max-w-2xl text-md md:text-xl text-light/80">
             Que ce soit pour lancer un nouveau produit, renforcer une équipe ou

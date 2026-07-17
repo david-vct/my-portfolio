@@ -194,10 +194,10 @@ const Hero = () => {
                 icon={faStarOfLife}
               />
               <p>
-                Conception et développement de{" "}
                 <span className="text-transparent">
-                  solutions web et mobiles
-                </span>
+                  Conception et développement
+                </span>{" "}
+                de solutions web et mobiles
               </p>
             </motion.li>
             <motion.li
@@ -210,10 +210,8 @@ const Hero = () => {
                 icon={faStarOfLife}
               />
               <p>
-                Renfort technique au sein de{" "}
-                <span className="text-transparent">
-                  vos équipes de développement
-                </span>
+                <span className="text-transparent">Renfort technique</span> au
+                sein de vos équipes de développement
               </p>
             </motion.li>
             <motion.li

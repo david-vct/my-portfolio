@@ -69,3 +69,27 @@ body {
 		animation: none;
 	}
 }
+
+.gold-icon path {
+	fill: url(#award-gold-gradient);
+}
+
+@keyframes icon-sheen {
+	0% {
+		background-position: -120% 0;
+	}
+	55%,
+	100% {
+		background-position: 180% 0;
+	}
+}
+
+.animate-icon-sheen {
+	animation: icon-sheen 2.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.animate-icon-sheen {
+		animation: none;
+	}
+}
