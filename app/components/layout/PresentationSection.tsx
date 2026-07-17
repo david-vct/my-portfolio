@@ -1,7 +1,40 @@
+import Image from "next/image"
 import React from "react"
 import Reveal from "../common/motion/Reveal"
 import Title from "../common/Title"
 import { getYearsOfExperience } from "@/app/lib/date"
+
+const clients: {
+  name: string
+  logo: string
+  width: number
+  height: number
+  className?: string
+}[] = [
+  {
+    name: "Groupe Adonis",
+    logo: "/logos/adonis-education-logo.png",
+    width: 120,
+    height: 42,
+    className: "dark:brightness-0 dark:invert",
+  },
+  {
+    name: "SEDRAP",
+    logo: "/logos/sedrap.svg",
+    width: 135,
+    height: 16,
+    className: "invert dark:invert-0",
+  },
+  { name: "Capgemini", logo: "/logos/capgemini.svg", width: 120, height: 28 },
+  { name: "EDF", logo: "/logos/edf.svg", width: 66, height: 28 },
+  {
+    name: "PadelGo",
+    logo: "/logos/padelgo-logo.png",
+    width: 105,
+    height: 28,
+    className: "[filter:drop-shadow(0_1px_2px_rgba(0,0,0,0.45))]",
+  },
+]
 
 const PresentationSection = () => {
   const yearsOfExperience = getYearsOfExperience()
@@ -29,17 +62,26 @@ const PresentationSection = () => {
           </p>
         </Reveal>
         <Reveal className="border-l border-neutral pl-8" delay={0.2}>
-          <h2 className="text-2xl md:text-4xl font-bold pb-4">
-            Mes valeurs et méthodologies
+          <h2 className="text-2xl md:text-4xl font-bold pb-6">
+            Ils m&apos;ont fait confiance
           </h2>
-          <p className="text-md md:text-xl">
-            Mon approche repose sur une <strong>écoute attentive</strong> de vos
-            besoins, une <strong>collaboration étroite</strong> tout au long du
-            projet, et un engagement à fournir des architectures robustes,
-            évolutives et optimisées. Mon objectif est de{" "}
-            <strong>garantir la satisfaction du client</strong> en respectant
-            les délais et en offrant un suivi personnalisé.
-          </p>
+          <div className="flex flex-row flex-wrap items-center gap-x-8 gap-y-6">
+            {clients.map((client) => (
+              <div
+                key={client.name}
+                title={client.name}
+                className="transition-transform duration-300 hover:-translate-y-0.5 hover:scale-105"
+              >
+                <Image
+                  src={client.logo}
+                  alt={client.name}
+                  width={client.width}
+                  height={client.height}
+                  className={`object-contain ${client.className ?? ""}`}
+                />
+              </div>
+            ))}
+          </div>
         </Reveal>
       </div>
     </section>
