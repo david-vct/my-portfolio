@@ -27,6 +27,21 @@ const ProjectSection = () => {
         </Reveal>
         <Reveal fade={false}>
           <ProjectCard
+            title="Experimental Coding"
+            period="juil. 2026 – aujourd'hui"
+            description="Galerie d'expérimentations autour du code créatif : quines, fractales, shaders WebGL et automates cellulaires. Chaque expérience tient dans un seul fichier, sans build ni dépendance, et s'exécute directement dans la page."
+            images={[
+              "/projects/experimental-coding-1.gif",
+              "/projects/experimental-coding-2.gif",
+              "/projects/experimental-coding-3.png",
+            ]}
+            site={"https://david-vct.github.io/experimental-coding/"}
+            siteName="Galerie"
+            github={"https://github.com/david-vct/experimental-coding"}
+          ></ProjectCard>
+        </Reveal>
+        <Reveal fade={false}>
+          <ProjectCard
             title="DuckDuckGo Custom Tabs"
             period="avr. 2026 – mai 2026"
             description="Extension de navigateur permettant de personnaliser DuckDuckGo en redirigeant les onglets vers les services de son choix comme Google Maps, Wikipédia ou Reddit."
