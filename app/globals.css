@@ -24,6 +24,17 @@ body {
 	.text-balance {
 		text-wrap: balance;
 	}
+
+	/* Carousels are driven by their own controls, swipe and keyboard focus, so
+	   the native scrollbar would only add visual noise under the slides. */
+	.no-scrollbar {
+		scrollbar-width: none;
+		-ms-overflow-style: none;
+	}
+
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 @keyframes marquee {
